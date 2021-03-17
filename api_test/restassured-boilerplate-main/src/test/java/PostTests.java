@@ -25,7 +25,6 @@ public class PostTests extends BaseTest {
                 .post(resourcePathExam);
         JsonPath jsonPathEvaluator = response.jsonPath();
         createdPost = jsonPathEvaluator.get("id");
-        System.out.println("Created post============>" + createdPost);
     }
 
     @Test

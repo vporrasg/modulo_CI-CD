@@ -28,7 +28,6 @@ public class CommentTests extends BaseTest {
     @Test
     public void Create_Comment_Success(){
         Comment testPost = new Comment(DataHelper.generateRandomTitle(), DataHelper.generateRandomContent());
-        System.out.println("Created comment============>" + testPost.getName()+","+testPost.getComment());
 
         given()
                 .spec(RequestSpecs.basicAuth())
@@ -125,7 +124,6 @@ public class CommentTests extends BaseTest {
     @Test
     public void Update_Comment_Success(){
         Comment testPost = new Comment(DataHelper.generateRandomTitle(), DataHelper.generateRandomContent());
-        System.out.println("Created comment============>" + testPost.getName()+","+testPost.getComment());
 
         given()
                 .spec(RequestSpecs.basicAuth())
@@ -139,7 +137,6 @@ public class CommentTests extends BaseTest {
     @Test
     public void Update_Comment_Failed(){
         Comment testPost = new Comment(DataHelper.generateRandomTitle(), DataHelper.generateRandomContent());
-        System.out.println("Created comment============>" + testPost.getName()+","+testPost.getComment());
 
         given()
                 .spec(RequestSpecs.basicAuth())
@@ -153,7 +150,6 @@ public class CommentTests extends BaseTest {
     @Test
     public void Update_Comment_Security(){
         Comment testPost = new Comment(DataHelper.generateRandomTitle(), DataHelper.generateRandomContent());
-        System.out.println("Created comment============>" + testPost.getName()+","+testPost.getComment());
 
         given()
                 .spec(RequestSpecs.basicAuthWrong())
@@ -193,8 +189,4 @@ public class CommentTests extends BaseTest {
                 .statusCode(401)
                 .spec(ResponseSpecs.defaultSpec());
     }
-
-
-
-
 }
